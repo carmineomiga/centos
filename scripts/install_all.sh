@@ -8,3 +8,4 @@ rmbeep.sh
 trans.sh
 pip.sh
 devtool.sh
+ffmpeg.sh
