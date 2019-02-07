@@ -7,5 +7,5 @@ yum -y install gcc
 yum -y install make
 
 # 모팩아카데미용 그래픽 카드 드라이버
-cd /tmp
-http://us.download.nvidia.com/XFree86/Linux-x86_64/410.93/NVIDIA-Linux-x86_64-410.93.run
+cd ~
+wget http://us.download.nvidia.com/XFree86/Linux-x86_64/390.87/NVIDIA-Linux-x86_64-390.87.run
