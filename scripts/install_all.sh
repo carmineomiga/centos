@@ -9,3 +9,4 @@ trans.sh
 pip.sh
 devtool.sh
 ffmpeg.sh
+handbrake.sh
