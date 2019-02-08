@@ -5,3 +5,5 @@ python get-pip.py
 
 #pip install --upgrade setuptools
 pip install --user pymediainfo
+pip install --user PySide2
+pip install --user numpy
