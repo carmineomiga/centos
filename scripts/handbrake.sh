@@ -20,7 +20,7 @@ cd ~/app
 git clone https://github.com/HandBrake/HandBrake.git
 cd HandBrake
 git tag --list | grep ^1\.1\.
-git checkout refs/tags/
+git checkout refs/tags/$(git tag -l | grep -E '^1\.1\.[0-9]+$' | tail -n 1)
 ./configure --launch-jobs=16 --launch
 make --directory=build install
 rm -rf build
