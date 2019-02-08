@@ -7,3 +7,4 @@ python get-pip.py
 pip install --user pymediainfo
 pip install --user PySide2
 pip install --user numpy
+pip install --user Cython
