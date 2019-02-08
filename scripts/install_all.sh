@@ -10,3 +10,4 @@
 ./devtool.sh
 ./ffmpeg.sh
 ./handbrake.sh
+./ocio_config.sh
