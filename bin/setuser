@@ -1,0 +1,23 @@
+zenity --forms --title="id" \
+--add-entry="id" \
+
+zenity --forms --title="name eng" \
+--add-entry="name kor" \
+
+zenity --forms --title="E-mail" \
+--add-entry="이메일(E-maile)" \
+
+zenity --entry --title="Select Part" \
+--text="팀(부서)를 선택해주세요." 오미자 복분자 유자
+
+zenity --entry --title="Select Task" \
+--text="Task를 선택해주세요." 농사 재배 보관 제조 유통
+
+case $? in
+	0)
+		echo "done";;
+	1)
+		echo "cancel";;
+	-1)
+		echo "cancel";;
+esac

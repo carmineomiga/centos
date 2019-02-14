@@ -11,6 +11,7 @@
 ./ffmpeg.sh
 ./handbrake.sh
 ./ocio_config.sh
+./rmhotcorner.sh
 
 # gcc6.x를 이용해서 빌드한다.
 scl enable devtoolset-6 ./cmake.sh
