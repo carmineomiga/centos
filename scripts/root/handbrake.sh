@@ -12,15 +12,14 @@ yum -y repo-pkgs zmrepo remove
 yum -y remove zmrepo
 yum -y localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
 yum -y install lame-devel x264-devel
-
 if [ ! -d "/home/$USER/app" ]; then
 	mkdir /home/$USER/app
 fi
-cd ~/app
+cd /home/$USER/app
 git clone https://github.com/HandBrake/HandBrake.git
 cd HandBrake
 git tag --list | grep ^1\.1\.
-git checkout refs/tags/$(git tag -l | grep -E '^1\.1\.[0-9]+$' | tail -n 1)
-./configure --launch-jobs=16 --launch
+git checkout refs/tags/
+./configure --launch-jobs=8 --launch
 make --directory=build install
 rm -rf build

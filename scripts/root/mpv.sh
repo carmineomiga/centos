@@ -1,4 +1,9 @@
 #!/bin/sh
+if [[ $EUID -ne 0 ]]; then
+	echo "This script must be run as Root" 1>&2
+	exit 1
+fi
+yum -y install epel-release
 yum -y install yasm
 yum -y install fribidi
 yum -y install youtube-dl
@@ -31,11 +36,11 @@ yum -y install libva-devel
 yum -y install gstreamer1-vaapi-devel
 yum -y install libcaca-devel
 yum -y install dh-autoreconf.noarch
-$ cd /tmp
-$ git clone https://github.com/mpv-player/mpv-build.git mpv_src
-$ cd mpv_src
-$ mkdir mpv-build
-$ echo --enable-openssl >> ffmpeg_options
-$ echo --enable-nonfree >> ffmpeg_options
-$ ./rebuild -j4
+cd /tmp
+git clone https://github.com/mpv-player/mpv-build.git mpv_src
+cd mpv_src
+mkdir mpv-build
+echo --enable-openssl >> ffmpeg_options
+echo --enable-nonfree >> ffmpeg_options
+./rebuild -j4
 ./install
