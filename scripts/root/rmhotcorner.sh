@@ -5,4 +5,6 @@ if [[ $EUID -ne 0 ]]; then
 fi
 yum -y install gnome-tweak-tool
 yum -y install gnome-shell-extension-no-hot-corner
+# # reboot 를 해줍니다.
 # $ gnome-tweaks 를 타이핑 후, 확장 메뉴에서 "no topleft hot corner"를 켭니다.
+
